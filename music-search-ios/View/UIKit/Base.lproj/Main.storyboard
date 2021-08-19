@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TPc-zc-dLf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="music_search_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ybk-pc-kns">
+                                <rect key="frame" x="0.0" y="188" width="414" height="574"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZN-kG-VbR">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="124.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <state key="normal" title="UIKit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonClickHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goJ-fd-eKP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCe-lx-LGQ">
+                                        <rect key="frame" x="16" y="224.5" width="382" height="125"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <state key="normal" title="SwiftUI">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonClickHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Psi-1w-QnI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o9-km-Kiu">
+                                        <rect key="frame" x="16" y="449.5" width="382" height="124.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <state key="normal" title="UIKit + SwiftUI">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonClickHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSI-hU-TkE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cCe-lx-LGQ" firstAttribute="leading" secondItem="Ybk-pc-kns" secondAttribute="leading" constant="16" id="3Oq-7A-yNY"/>
+                                    <constraint firstAttribute="trailing" secondItem="cCe-lx-LGQ" secondAttribute="trailing" constant="16" id="3vF-er-mEU"/>
+                                    <constraint firstAttribute="trailing" secondItem="eZN-kG-VbR" secondAttribute="trailing" constant="16" id="CYz-Sr-696"/>
+                                    <constraint firstItem="6o9-km-Kiu" firstAttribute="leading" secondItem="Ybk-pc-kns" secondAttribute="leading" constant="16" id="H4z-Wv-74m"/>
+                                    <constraint firstAttribute="trailing" secondItem="6o9-km-Kiu" secondAttribute="trailing" constant="16" id="jXk-hj-4yj"/>
+                                    <constraint firstItem="eZN-kG-VbR" firstAttribute="leading" secondItem="Ybk-pc-kns" secondAttribute="leading" constant="16" id="jqV-be-WW3"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ybk-pc-kns" secondAttribute="bottom" constant="100" id="2jc-q2-Qde"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ybk-pc-kns" secondAttribute="trailing" id="V8H-pJ-qef"/>
+                            <constraint firstItem="Ybk-pc-kns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vjb-LX-jlh"/>
+                            <constraint firstItem="Ybk-pc-kns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="WLz-gs-4ex"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tiJ-g0-oDv"/>
+                    <connections>
+                        <outlet property="swiftuiButton" destination="cCe-lx-LGQ" id="9M3-qT-Tsc"/>
+                        <outlet property="uikitButton" destination="eZN-kG-VbR" id="cwc-RZ-uFK"/>
+                        <outlet property="uikitSwiftUIButton" destination="6o9-km-Kiu" id="klg-Tc-AbO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="81.696428571428569"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="ehS-yJ-Zpa">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="qax-6z-uGw" customClass="SearchViewController" customModule="music_search_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ex8-fp-IA8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oMS-vU-7kJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-Ct-yOb">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wJz-Zi-GC3">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wJz-Zi-GC3" id="ceg-kT-hRO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eSO-8J-oKm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oMS-vU-7kJ" firstAttribute="trailing" secondItem="eSO-8J-oKm" secondAttribute="trailing" id="BFN-aX-TFj"/>
+                            <constraint firstItem="oMS-vU-7kJ" firstAttribute="leading" secondItem="eSO-8J-oKm" secondAttribute="leading" id="SiU-0O-djm"/>
+                            <constraint firstItem="WI0-Ct-yOb" firstAttribute="top" secondItem="oMS-vU-7kJ" secondAttribute="bottom" id="bgS-0H-ep0"/>
+                            <constraint firstItem="oMS-vU-7kJ" firstAttribute="top" secondItem="eSO-8J-oKm" secondAttribute="top" id="vfu-EQ-Vls"/>
+                            <constraint firstItem="WI0-Ct-yOb" firstAttribute="leading" secondItem="eSO-8J-oKm" secondAttribute="leading" id="wfK-Rb-CdU"/>
+                            <constraint firstItem="eSO-8J-oKm" firstAttribute="trailing" secondItem="WI0-Ct-yOb" secondAttribute="trailing" id="wi6-Au-S4a"/>
+                            <constraint firstItem="eSO-8J-oKm" firstAttribute="bottom" secondItem="WI0-Ct-yOb" secondAttribute="bottom" id="zqp-2s-EvP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9mG-gT-sLK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892.753623188406" y="81.696428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HHz-Of-NEy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPc-zc-dLf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ANv-m4-BtP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6oa-kx-vvw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YyX-5w-VQR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

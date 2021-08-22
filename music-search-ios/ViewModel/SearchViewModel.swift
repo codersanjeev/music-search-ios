@@ -11,6 +11,15 @@ import Combine
 class SearchViewModel: ObservableObject {
 	private var store = Set<AnyCancellable>()
 	@Published var songs = [SongModel]()
+	@Published var searchText = ""
+	
+	init() {
+		self.$searchText.sink { [weak self] text in
+			if !text.isEmpty {
+				self?.searchSongs(with: text)
+			}
+		}.store(in: &store)
+	}
 	
 	func searchSongs(with key: String, completionHandler: (([SongModel]) -> Void)? = nil) {
 		ITunesClient.shared.getSearchResults(for: key)

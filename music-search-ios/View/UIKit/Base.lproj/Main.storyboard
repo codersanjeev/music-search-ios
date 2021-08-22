@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ybk-pc-kns">
-                                <rect key="frame" x="0.0" y="188" width="414" height="574"/>
+                                <rect key="frame" x="0.0" y="288" width="414" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZN-kG-VbR">
-                                        <rect key="frame" x="16" y="0.0" width="382" height="124.5"/>
+                                        <rect key="frame" x="16" y="0.0" width="382" height="137"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="UIKit">
@@ -36,7 +36,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCe-lx-LGQ">
-                                        <rect key="frame" x="16" y="224.5" width="382" height="125"/>
+                                        <rect key="frame" x="16" y="237" width="382" height="137"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="SwiftUI">
@@ -51,29 +51,11 @@
                                             <action selector="buttonClickHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Psi-1w-QnI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o9-km-Kiu">
-                                        <rect key="frame" x="16" y="449.5" width="382" height="124.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <state key="normal" title="UIKit + SwiftUI">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonClickHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSI-hU-TkE"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cCe-lx-LGQ" firstAttribute="leading" secondItem="Ybk-pc-kns" secondAttribute="leading" constant="16" id="3Oq-7A-yNY"/>
                                     <constraint firstAttribute="trailing" secondItem="cCe-lx-LGQ" secondAttribute="trailing" constant="16" id="3vF-er-mEU"/>
                                     <constraint firstAttribute="trailing" secondItem="eZN-kG-VbR" secondAttribute="trailing" constant="16" id="CYz-Sr-696"/>
-                                    <constraint firstItem="6o9-km-Kiu" firstAttribute="leading" secondItem="Ybk-pc-kns" secondAttribute="leading" constant="16" id="H4z-Wv-74m"/>
-                                    <constraint firstAttribute="trailing" secondItem="6o9-km-Kiu" secondAttribute="trailing" constant="16" id="jXk-hj-4yj"/>
                                     <constraint firstItem="eZN-kG-VbR" firstAttribute="leading" secondItem="Ybk-pc-kns" secondAttribute="leading" constant="16" id="jqV-be-WW3"/>
                                 </constraints>
                             </stackView>
@@ -81,17 +63,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ybk-pc-kns" secondAttribute="bottom" constant="100" id="2jc-q2-Qde"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ybk-pc-kns" secondAttribute="bottom" constant="200" id="2jc-q2-Qde"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ybk-pc-kns" secondAttribute="trailing" id="V8H-pJ-qef"/>
                             <constraint firstItem="Ybk-pc-kns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vjb-LX-jlh"/>
-                            <constraint firstItem="Ybk-pc-kns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="WLz-gs-4ex"/>
+                            <constraint firstItem="Ybk-pc-kns" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="WLz-gs-4ex"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tiJ-g0-oDv"/>
                     <connections>
                         <outlet property="swiftuiButton" destination="cCe-lx-LGQ" id="9M3-qT-Tsc"/>
                         <outlet property="uikitButton" destination="eZN-kG-VbR" id="cwc-RZ-uFK"/>
-                        <outlet property="uikitSwiftUIButton" destination="6o9-km-Kiu" id="klg-Tc-AbO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -114,7 +95,7 @@
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wJz-Zi-GC3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="wJz-Zi-GC3">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wJz-Zi-GC3" id="ceg-kT-hRO">

@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 	// MARK:- IBOutlets
 	@IBOutlet weak var uikitButton: UIButton!
 	@IBOutlet weak var swiftuiButton: UIButton!
-	@IBOutlet weak var uikitSwiftUIButton: UIButton!
 	
 	// MARK:- IBActions
 	@IBAction func buttonClickHandler(_ sender: UIButton) {
@@ -24,8 +23,6 @@ class ViewController: UIViewController {
 			let searchView = SearchView()
 			let searchViewController = UIHostingController(rootView: searchView)
 			self.navigationController?.pushViewController(searchViewController, animated: true)
-		} else {
-			print("uikit + swiftui")
 		}
 	}
 }

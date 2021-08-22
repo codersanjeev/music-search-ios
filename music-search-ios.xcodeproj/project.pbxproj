@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF74341C26CE4E0F008D4D78 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74341B26CE4E0F008D4D78 /* AsyncImage.swift */; };
+		AF74341E26CE5595008D4D78 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF74341D26CE5595008D4D78 /* AsyncImageView.swift */; };
 		AF91C25826CCD3C600A20E51 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91C25726CCD3C600A20E51 /* SearchViewController.swift */; };
 		AF91C25A26CCD5CC00A20E51 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF91C25926CCD5CC00A20E51 /* SearchView.swift */; };
 		AFA30B1F26CBF2FB00E14B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA30B1E26CBF2FB00E14B86 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF74341B26CE4E0F008D4D78 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		AF74341D26CE5595008D4D78 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		AF91C25726CCD3C600A20E51 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AF91C25926CCD5CC00A20E51 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		AFA30B1B26CBF2FB00E14B86 /* music-search-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "music-search-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AF91C25926CCD5CC00A20E51 /* SearchView.swift */,
+				AF74341D26CE5595008D4D78 /* AsyncImageView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA30B3E26CC29EC00E14B86 /* SearchViewModel.swift */,
+				AF74341B26CE4E0F008D4D78 /* AsyncImage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA30B3F26CC29EC00E14B86 /* SearchViewModel.swift in Sources */,
+				AF74341C26CE4E0F008D4D78 /* AsyncImage.swift in Sources */,
 				AF91C25826CCD3C600A20E51 /* SearchViewController.swift in Sources */,
+				AF74341E26CE5595008D4D78 /* AsyncImageView.swift in Sources */,
 				AFA30B3B26CBF54B00E14B86 /* ITunesClient.swift in Sources */,
 				AFA30B2326CBF2FB00E14B86 /* ViewController.swift in Sources */,
 				AF91C25A26CCD5CC00A20E51 /* SearchView.swift in Sources */,

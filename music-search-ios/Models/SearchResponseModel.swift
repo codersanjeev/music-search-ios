@@ -14,9 +14,10 @@ struct SearchResponseModel: Codable,Hashable {
 }
 
 // MARK: - SongModel
-struct SongModel: Codable,Hashable {
+struct SongModel: Codable, Hashable, Identifiable {
 	let wrapperType, kind: String?
-	let artistID, collectionID, trackID: Int?
+	let id: Int
+	let artistID, collectionID: Int?
 	let collectionName,collectionCensoredName: String?
 	var artistName, trackName: String?
 	let trackCensoredName: String?
@@ -37,7 +38,7 @@ struct SongModel: Codable,Hashable {
 		case wrapperType, kind
 		case artistID = "artistId"
 		case collectionID = "collectionId"
-		case trackID = "trackId"
+		case id = "trackId"
 		case artistName, collectionName, trackName, collectionCensoredName, trackCensoredName
 		case artistViewURL = "artistViewUrl"
 		case collectionViewURL = "collectionViewUrl"

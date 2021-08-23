@@ -2,9 +2,6 @@
 //  AsyncImage.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 19/08/21.
-//
-
 import SwiftUI
 import UIKit
 import Combine

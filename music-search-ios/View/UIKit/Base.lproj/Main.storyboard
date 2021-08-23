@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--UIKit vs SwiftUI-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="music_search_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="UIKit vs SwiftUI" id="BYZ-38-t0r" customClass="ViewController" customModule="music_search_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,20 +90,81 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oMS-vU-7kJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="qax-6z-uGw" id="XfL-j2-zvL"/>
+                                </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-Ct-yOb">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WI0-Ct-yOb">
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="wJz-Zi-GC3">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchResultsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchResultsTableViewCell" rowHeight="100" id="wJz-Zi-GC3" customClass="SearchResultsTableViewCell" customModule="music_search_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wJz-Zi-GC3" id="ceg-kT-hRO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbQ-OF-lJB">
+                                                    <rect key="frame" x="8" y="4" width="398" height="92"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-pL-kHw">
+                                                            <rect key="frame" x="108" y="8" width="282" height="17"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLK-jQ-fPm">
+                                                            <rect key="frame" x="108" y="69.5" width="282" height="14.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybA-Sh-SlU">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="92"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="JcB-xH-ZqF"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="QOl-pL-kHw" firstAttribute="top" secondItem="QbQ-OF-lJB" secondAttribute="top" constant="8" id="9tK-zu-qQq"/>
+                                                        <constraint firstItem="QOl-pL-kHw" firstAttribute="leading" secondItem="ybA-Sh-SlU" secondAttribute="trailing" constant="8" id="P7L-Kj-vgT"/>
+                                                        <constraint firstItem="ybA-Sh-SlU" firstAttribute="leading" secondItem="QbQ-OF-lJB" secondAttribute="leading" id="Vet-JY-056"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JLK-jQ-fPm" secondAttribute="bottom" constant="8" id="Vjv-JK-Ran"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ybA-Sh-SlU" secondAttribute="bottom" id="YMf-5I-FeM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JLK-jQ-fPm" secondAttribute="trailing" constant="8" id="k6j-Hm-Cbx"/>
+                                                        <constraint firstItem="ybA-Sh-SlU" firstAttribute="top" secondItem="QbQ-OF-lJB" secondAttribute="top" id="kFw-AA-pk9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QOl-pL-kHw" secondAttribute="trailing" constant="8" id="uRp-VT-C7Z"/>
+                                                        <constraint firstItem="JLK-jQ-fPm" firstAttribute="leading" secondItem="ybA-Sh-SlU" secondAttribute="trailing" constant="8" id="ukA-Tm-Abk"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="QbQ-OF-lJB" secondAttribute="bottom" constant="4" id="TbH-yl-g9F"/>
+                                                <constraint firstAttribute="trailing" secondItem="QbQ-OF-lJB" secondAttribute="trailing" constant="8" id="ZtJ-Z6-Bg6"/>
+                                                <constraint firstItem="QbQ-OF-lJB" firstAttribute="leading" secondItem="ceg-kT-hRO" secondAttribute="leading" constant="8" id="d3t-Qr-z0g"/>
+                                                <constraint firstItem="QbQ-OF-lJB" firstAttribute="top" secondItem="ceg-kT-hRO" secondAttribute="top" constant="4" id="ui5-Oo-hDY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="JLK-jQ-fPm" id="ZpL-vF-zdK"/>
+                                            <outlet property="thumbnailImageView" destination="ybA-Sh-SlU" id="UBQ-Hq-QVN"/>
+                                            <outlet property="titleLabel" destination="QOl-pL-kHw" id="qMg-As-sS0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qax-6z-uGw" id="fBu-23-EVS"/>
+                                    <outlet property="delegate" destination="qax-6z-uGw" id="bta-aB-B6b"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eSO-8J-oKm"/>
@@ -118,15 +179,18 @@
                             <constraint firstItem="eSO-8J-oKm" firstAttribute="bottom" secondItem="WI0-Ct-yOb" secondAttribute="bottom" id="zqp-2s-EvP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchTableView" destination="WI0-Ct-yOb" id="Yke-pH-Y5J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mG-gT-sLK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1892.753623188406" y="81.696428571428569"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--UIKit vs SwiftUI-->
         <scene sceneID="HHz-Of-NEy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TPc-zc-dLf" sceneMemberID="viewController">
+                <navigationController title="UIKit vs SwiftUI" automaticallyAdjustsScrollViewInsets="NO" id="TPc-zc-dLf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ANv-m4-BtP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -145,6 +209,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

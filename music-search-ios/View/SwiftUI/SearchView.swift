@@ -2,9 +2,6 @@
 //  SearchView.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 18/08/21.
-//
-
 import SwiftUI
 
 // MARK:- Main Screen
@@ -25,8 +22,7 @@ struct SearchView: View {
 					}
 				}
 			}
-			
-		}
+		}.navigationTitle("SwiftUI")
 	}
 }
 
@@ -91,7 +87,6 @@ struct SearchBarView: UIViewRepresentable {
 	}
 	
 	class SearchBarCoordinator: NSObject, UISearchBarDelegate {
-		
 		@Binding var searchText: String
 		
 		init(_ searchText: Binding<String>) {

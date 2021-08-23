@@ -20,6 +20,7 @@
 		AFA30B3B26CBF54B00E14B86 /* ITunesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA30B3A26CBF54B00E14B86 /* ITunesClient.swift */; };
 		AFA30B3D26CBFA2000E14B86 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA30B3C26CBFA2000E14B86 /* SearchResponseModel.swift */; };
 		AFA30B3F26CC29EC00E14B86 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA30B3E26CC29EC00E14B86 /* SearchViewModel.swift */; };
+		AFF29C5126D2683F00914B94 /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF29C5026D2683F00914B94 /* SearchResultsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AFA30B3A26CBF54B00E14B86 /* ITunesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITunesClient.swift; sourceTree = "<group>"; };
 		AFA30B3C26CBFA2000E14B86 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
 		AFA30B3E26CC29EC00E14B86 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		AFF29C5026D2683F00914B94 /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				AFA30B2926CBF2FD00E14B86 /* LaunchScreen.storyboard */,
 				AFA30B2426CBF2FB00E14B86 /* Main.storyboard */,
 				AF91C25726CCD3C600A20E51 /* SearchViewController.swift */,
+				AFF29C5026D2683F00914B94 /* SearchResultsTableViewCell.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF29C5126D2683F00914B94 /* SearchResultsTableViewCell.swift in Sources */,
 				AFA30B3F26CC29EC00E14B86 /* SearchViewModel.swift in Sources */,
 				AF74341C26CE4E0F008D4D78 /* AsyncImage.swift in Sources */,
 				AF91C25826CCD3C600A20E51 /* SearchViewController.swift in Sources */,

@@ -2,9 +2,6 @@
 //  ViewController.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 17/08/21.
-//
-
 import UIKit
 import SwiftUI
 
@@ -12,6 +9,12 @@ class ViewController: UIViewController {
 	// MARK:- IBOutlets
 	@IBOutlet weak var uikitButton: UIButton!
 	@IBOutlet weak var swiftuiButton: UIButton!
+	
+	// MARK: Lifecycle Methods
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.title = "UIKit vs SwiftUI"
+	}
 	
 	// MARK:- IBActions
 	@IBAction func buttonClickHandler(_ sender: UIButton) {

@@ -2,14 +2,10 @@
 //  ITunesClient.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 17/08/21.
-//
-
 import Foundation
 import Combine
 
 class ITunesClient {
-	
 	private init() {}
 	static let shared = ITunesClient()
 	private let baseUrlString = "https://itunes.apple.com/search/"
@@ -48,7 +44,6 @@ class ITunesClient {
 			
 		}
 	}
-	
 }
 
 enum NetworkError: Error {

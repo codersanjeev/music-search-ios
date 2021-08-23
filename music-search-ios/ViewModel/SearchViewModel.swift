@@ -2,9 +2,6 @@
 //  SearchViewModel.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 17/08/21.
-//
-
 import Foundation
 import Combine
 

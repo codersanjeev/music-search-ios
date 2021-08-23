@@ -2,19 +2,16 @@
 //  SearchResponseModel.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 17/08/21.
-//
-
 import Foundation
 
 // MARK: - SearchResponseModel
-struct SearchResponseModel: Codable,Hashable {
+struct SearchResponseModel: Decodable, Hashable {
 	let resultCount: Int
 	let results: [SongModel]
 }
 
 // MARK: - SongModel
-struct SongModel: Codable, Hashable, Identifiable {
+struct SongModel: Decodable, Hashable, Identifiable {
 	let wrapperType, kind: String?
 	let id: Int
 	let artistID, collectionID: Int?

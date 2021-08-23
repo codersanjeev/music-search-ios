@@ -2,13 +2,9 @@
 //  AsyncImageView.swift
 //  music-search-ios
 //
-//  Created by sanjeev on 19/08/21.
-//
-
 import SwiftUI
 
 struct AsyncImageView: View {
-	
 	@State var asyncImage: AsyncImage
 	
     var body: some View {
